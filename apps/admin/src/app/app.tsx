@@ -1,14 +1,18 @@
 import styles from './app.module.css';
 
+import { SharedComponents } from '@cool/shared-components';
+import { add } from 'utils/add';
+
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
 export function App() {
   return (
     <div className={styles.app}>
+      <SharedComponents />
       <header className="flex">
         <Logo width="75" height="75" />
-        <h1>Welcome to admin!</h1>
+        <h1>Welcome to admin! {add(1, 2, 3, 4)}</h1>
       </header>
       <main>
         <h2>Resources &amp; Tools</h2>
